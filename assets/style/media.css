@@ -1,0 +1,124 @@
+@media screen and (max-width: 600px) {
+    .nav .pages, .nav .nav-btn, .carousel .categories div ul, .offer-icon-item:last-child {
+        display: none;
+    }
+    .carousel-container {
+        grid-template-areas: 
+        "title main-img"
+        "description description"
+        "categories categories"
+        "btns-group btns-group"
+        "verified-buyer verified-buyer"
+        ;
+    }
+    .offer-icon-item {
+        flex-direction: column;
+    }
+    .offer-icon-item .big {
+        display: none;
+    }
+    .offers {
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: auto;
+    }
+    .carousel .title h1 {
+        font-size: 25px;
+    }
+    .carousel .categories div {
+        padding: 15px;
+    }
+    .carousel .categories {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .nav-container {
+        justify-content: center;
+    }
+    .carousel .title img {
+        position: absolute;
+        top: 96px;
+        left: 99px;
+        transform: rotateX(180deg);
+    }
+    .carousel .title {
+        position: relative;
+    }
+    .carousel .main-img {
+        width: 186px;
+    }
+    .carousel .btns-group {
+        margin-bottom: 16px;
+    }
+    .offer-icon-item h3 {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 12px;
+        line-height: 18px;
+        text-align: center;
+    }
+    .offers-container .offers-title h1 {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 39px;
+    }
+    .offer .title {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+    }
+    .offer .price {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 25px;
+        line-height: 31px;
+    }
+    .offer .old-price {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 31px;
+    }
+    .reviews {
+        grid-template-columns: repeat(4, 69%);
+        gap: 30px;
+        transition: transform 0.3s;
+    }
+    .customers .review-nav .stars span {
+        grid-column: 1 / 6;
+    }
+    .review-nav .stars {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
+    .reviews-container {
+        overflow: hidden;
+    }
+    .faq .faq-header {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 47px;
+    }
+    .faq-body {
+        flex-direction: column;
+    }
+    .faq .faq-body .avatar {
+        height: 195px;
+        object-position: top;
+        object-fit: cover;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .carousel .categories div:not(:last-child){
+        border-right: 1px solid var(--lighter-blue);
+    }
+    .offer-icon-item .small {
+        display: none;
+    }
+    .customer-buttons-container {
+        display: none;
+    }
+}
